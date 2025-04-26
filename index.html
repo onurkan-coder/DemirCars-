@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMR OTOMOTİV </title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="yorum.css"> 
+    <script type="text/javascript" src="js2.js"></script>
+</head>
+<body>
+    
+<!-- Menü çubuğu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <img src="resimler/onur.png" alt="logo DMR" width="100" height="90">
+        <a class="navbar-brand" href="index.html"></i>  <i>DEMİR OTOMOTİV</i> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"> <i class="fa fa-home"></i> Ana Sayfa</a></li>  <!-- Ana sayfa iconu var -->
+                <li class="nav-item"><a class="nav-link" href="about.html"> <i class="fa fa-user"></i> Hakkında</a></li>  <!-- Hakkında ikonu var-->
+                <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fa fa-phone"></i> İletişim</a></li>  <!-- İletişim iconu var -->
+                <li class="nav-item"><a class="nav-link" href="kullanici.html"> <i class="fas fa-key"></i></i> kullanıcı Kayıt</a></li>
+                <li class="nav-item"><a class="nav-link" href="kredi.html"> <i class="fas fa-credit-card"></i></i> Kredi Hesaplama</a></li>
+                <img src="resimler/square.png" alt="TR bayrak" width="50" height="50">
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ilk  Ekran  -->
+<header class="hero">
+    <h1><b>DEMİR OTOMOTİV</b></h1>
+    <p>Hayalinizdeki arabayı şimdi satın alın</p>
+    <a href="#cities" class="btn">Güncel Araba İlanlarımız</a>
+</header>
+
+<!-- Arama Çubuğu -->
+<div class="search-bar d-flex justify-content-center my-4">
+    <div class="input-group w-75">
+        <input type="text" class="form-control" id="searchInput" placeholder="Hayalini gerçeğe dönüştürmek için buradan başla..." onkeyup="filterCars()" aria-label="Ara">
+        <button class="btn btn-primary" onclick="filterCars()">ARA</button>
+        
+    </div>
+</div>
+  <!-- Gece/Gündüz Modu Butonları -->
+  <div class="text-center my-3">
+    <button type="button" onclick="darkMode()" class="btn btn-dark"><i>DarkMode</i></button>
+    <button type="button" onclick="lightMode()" class="btn btn-light"><i>LightMode</i></button>
+</div>
+<!-- Arabalar Bölümü -->
+<main class="container my-5">
+    <h2 class="text-center mb-5"><i> Araba İlanlarımız</i></h2>
+    <div class="row g-4" id="cities">
+        <!-- Ferrari 488 GTB -->
+        <div class="col-md-4">
+            <div class="card" data-name="Ferrari 488 GTB">
+                <img src="resimler/Ferrari1.jpg" alt="Ferrari" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Ferrari 488 GTB</h5>
+                    <p class="card-text">Ferrari 488 GTB, yüksek hız ve zarafetin birleşimidir.</p>
+                    <div class="card-price">₺3,500,000</div>
+                    <a href="ferrari.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites('Ferrari 488 GTB')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lamborghini Aventador -->
+        <div class="col-md-4">
+            <div class="card" data-name="Lamborghini Aventador">
+                <img src="resimler/lamborghini.jpg" alt="Lamborghini Aventador" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Lamborghini Aventador</h5>
+                    <p class="card-text">Lamborghini Aventador, mükemmel hız ve tasarım.</p>
+                    <div class="card-price">₺5,000,000</div>
+                    <a href="lamborghini.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites('Lamborghini Aventador')">Favorilere Ekle</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Porsche 911 Turbo -->
+        <div class="col-md-4">
+            <div class="card" data-name="Porsche 911 Turbo">
+                <img src="resimler/porshe.jpg" alt="Porsche 911 Turbo" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Porsche 911 Turbo</h5>
+                    <p class="card-text">Porsche 911 Turbo, klasik tasarım ve modern teknoloji.</p>
+                    <div class="card-price">₺4,200,000</div>
+                    <a href="porsche.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites('Porsche 911 Turbo')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audi R8 -->
+        <div class="col-md-4">
+            <div class="card" data-name="Audi R8">
+                <img src="resimler/audi.jpg" alt="Audi R8" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Audi R8</h5>
+                    <p class="card-text">Audi R8, yüksek performans ve zarif tasarım.</p>
+                    <div class="card-price">₺3,800,000</div>
+                    <a href="audi.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites('Audi R8')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- McLaren 720S -->
+        <div class="col-md-4">
+            <div class="card" data-name="McLaren 720S">
+                <img src="resimler/macleren.jpg" alt="McLaren 720S" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">McLaren 720S</h5>
+                    <p class="card-text">McLaren 720S, mühendisliğin zirvesi.</p>
+                    <div class="card-price">₺6,200,000</div>
+                    <a href="mclaren.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites('McLaren 720S')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bugatti Chiron -->
+        <div class="col-md-4">
+            <div class="card" data-name="Bugatti Chiron">
+                <img src="resimler/bugatti.jpg" alt="Bugatti Chiron" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Bugatti Chiron</h5>
+                    <p class="card-text">Bugatti Chiron, lüks ve performansın mükemmel birleşimi.</p>
+                    <div class="card-price">₺30,000,000</div>
+                    <a href="bugatti.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites(' Bugatti Chiron')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ferrari Roma -->
+        <div class="col-md-4">
+            <div class="card" data-name="Ferrari Roma">
+                <img src="resimler/ferrariroma.jpg" alt="Ferrari Roma" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Ferrari Roma</h5>
+                    <p class="card-text">Ferrari Roma, zarif tasarım ve güçlü performans.</p>
+                    <div class="card-price">₺5,500,000</div>
+                    <a href="ferrariroma.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites(' Ferrari Roma')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rolls-Royce Wraith -->
+        <div class="col-md-4">
+            <div class="card" data-name="Rolls-Royce Wraith">
+                <img src="resimler/rolls.jpg" alt="Rolls-Royce Wraith" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Rolls-Royce Wraith</h5>
+                    <p class="card-text">Rolls-Royce Wraith, lüksün zirvesi.</p>
+                    <div class="card-price">₺8,500,000</div>
+                    <a href="rollsroyce.html" class="btn btn-primary">İlanı İnceleyin</a>
+                    <button class="btn btn-primary" onclick="addToFavorites(' Rolls-Royce Wraith')">Favorilere Ekle</button>
+                </div>
+            </div>
+        </div>
+        <!-- Bentley Continental GT -->
+<div class="col-md-4">
+    <div class="card" data-name="Bentley Continental GT">
+        <img src="resimler/bentley.jpg" alt="Bentley Continental GT" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Bentley Continental GT</h5>
+            <p class="card-text">Bentley Continental GT, zarif tasarımı ve güçlü performansı ile dikkat çeker.</p>
+            <div class="card-price">₺12,000,000</div>
+            <a href="bentley.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites(' Bentley Continental GT')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Mercedes AMG GT -->
+<div class="col-md-4">
+    <div class="card" data-name="Mercedes AMG GT">
+        <img src="resimler/mercedes,jpg.jpg" alt="Mercedes AMG GT" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Mercedes AMG GT</h5>
+            <p class="card-text">Mercedes AMG GT, yüksek performansı ve zarif tasarımı ile öne çıkar.</p>
+            <div class="card-price">₺7,500,000</div>
+            <a href="mercedes.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites(' Mercedes AMG GT')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- BMW i8 -->
+<div class="col-md-4">
+    <div class="card" data-name="BMW i8">
+        <img src="resimler/bmv.jpg" alt="BMW i8" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">BMW i8</h5>
+            <p class="card-text">BMW i8, inovasyon ve çevre dostu teknoloji ile yüksek performans sunar.</p>
+            <div class="card-price">₺2,800,000</div>
+            <a href="bmw.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites(' BMW i8')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Ferrari 812 Superfast -->
+<div class="col-md-4">
+    <div class="card" data-name="Ferrari 812 Superfast">
+        <img src="resimler/ferrari812.jpg" alt="Ferrari 812 Superfast" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Ferrari 812 Superfast</h5>
+            <p class="card-text">Ferrari 812 Superfast, olağanüstü performans ve zarif tasarımıyla dikkat çeker.</p>
+            <div class="card-price">₺7,200,000</div>
+            <a href="ferrrari812.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Ferrari 812 Superfast')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Pagani Huayra -->
+<div class="col-md-4">
+    <div class="card" data-name="Pagani Huayra">
+        <img src="resimler/pagani.jpg" alt="Pagani Huayra" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Pagani Huayra</h5>
+            <p class="card-text">Pagani Huayra, lüks ve hızın birleşimi. Tasarımı ve performansı ile benzersiz.</p>
+            <div class="card-price">₺12,000,000</div>
+            <a href="pagani.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Pagani Huayra')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Jaguar F-Type -->
+<div class="col-md-4">
+    <div class="card" data-name="Jaguar F-Type">
+        <img src="resimler/jagu.jpg" alt="Jaguar " class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Jaguar F-Type</h5>
+            <p class="card-text">Jaguar F-Type, şık tasarımı ve güçlü performansı ile sürüş keyfini zirveye taşıyor.</p>
+            <div class="card-price">₺2,500,000</div>
+            <a href="jaguar.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Jaguar F-Type')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- McLaren P1 -->
+<div class="col-md-4">
+    <div class="card" data-name="McLaren P1">
+        <img src="resimler/mac1.jpg" alt="McLaren" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">McLaren P1</h5>
+            <p class="card-text">McLaren P1, olağanüstü hız ve mühendislik harikası tasarımıyla etkileyici bir spor arabadır.</p>
+            <div class="card-price">₺12,000,000</div>
+            <a href="mclarenp1.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('McLaren P1')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Nissan GT-R -->
+<div class="col-md-4">
+    <div class="card" data-name="Nissan GT-R">
+        <img src="resimler/nissan.jpg" alt="Nissan GT-R" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Nissan GT-R</h5>
+            <p class="card-text">Nissan GT-R, yüksek performans ve sürüş keyfini bir arada sunan efsanevi bir spor arabadır.</p>
+            <div class="card-price">₺4,500,000</div>
+            <a href="nissangtr.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Nissan GT-R')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Maserati GranTurismo -->
+<div class="col-md-4">
+    <div class="card" data-name="Maserati GranTurismo">
+        <img src="resimler/maserati.jpg" alt="Maserati GranTurismo" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Maserati GranTurismo</h5>
+            <p class="card-text">Maserati GranTurismo, zarif tasarımı ve güçlü performansı ile göz alıcı bir spor otomobildir.</p>
+            <div class="card-price">₺3,800,000</div>
+            <a href="maserati.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Maserati GranTurismo')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Chevrolet Corvette -->
+<div class="col-md-4">
+    <div class="card" data-name="Chevrolet Corvette">
+        <img src="resimler/corvet.jpg" alt="Chevrolet Corvette" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Chevrolet Corvette</h5>
+            <p class="card-text">Chevrolet Corvette, güçlü motoru ve etkileyici tasarımı ile Amerikan spor otomobili ikonu.</p>
+            <div class="card-price">₺2,800,000</div>
+            <a href="chevrolet.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Chevrolet Corvette')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+<!-- Tesla Roadster -->
+<div class="col-md-4">
+    <div class="card" data-name="Tesla Roadster">
+        <img src="resimler/tesla.jpg" alt="Tesla Roadster" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Tesla Roadster</h5>
+            <p class="card-text">Tesla Roadster, elektrikli spor otomobil dünyasında devrim yaratan, yüksek hız ve verimlilik sunan bir araç.</p>
+            <div class="card-price">₺4,500,000</div>
+            <a href="tesla.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Tesla Roadster')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Koenigsegg Agera -->
+<div class="col-md-4">
+    <div class="card" data-name="Koenigsegg Agera">
+        <img src="resimler/konning.jpg" alt="Koenigsegg Agera" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Koenigsegg Agera</h5>
+            <p class="card-text">Koenigsegg Agera, hız ve mühendisliğin zirvesinde bir otomobil.</p>
+            <div class="card-price">₺20,000,000</div>
+            <a href="koenigsegg.html" class="btn btn-primary">İlanı İnceleyin</a>
+            <button class="btn btn-primary" onclick="addToFavorites('Koenigsegg Agera')">Favorilere Ekle</button>
+        </div>
+    </div>
+</div>
+
+     <!-- 6. Aston Martin -->
+     <div class="col-md-4">
+    <div class="card" data-name="Aston Martin DB11">
+    <img src="resimler/aston.jpg" alt="Aston Martin DB11">
+    <div class="card-body">
+        <h5 class="card-title">Aston Martin DB11</h5>
+        <p class="card-text">Aston Martin DB11, zarafet ve güç arasındaki mükemmel dengeyi sunar.</p>
+        <div class="card-price">₺6,000,000</div>
+        <a href="astonmartin.html" class="btn btn-primary">İlanı İnceleyin</a>
+        <button class="btn btn-primary" onclick="addToFavorites('Aston Martin DB11')">Favorilere Ekle</button>
+    </div>
+</div>
+       
+        
+    </div>
+</main>
+
+   <!-- Favori ilanlar Bölümü -->
+   <div class="container my-5">
+    <h2 class="text-center mb-5"><i> Favori Araba İlanları</i></h2>
+    <ul id="favoritesList" class="list-group">
+       
+    </ul>
+</div>
+    <!-- yorum  Bölümü -->
+    <div id="yorumlarBolumu">
+        <h2> <b><i>Tavsiye ve Öneri</i></b></h2>
+        <br>
+        <div id="yorumYazmaAlani">
+            <select id="cinsiyet">
+                <option value="erkek">Erkek</option>
+                <option value="kadin">Kadın</option>
+            </select>
+            <textarea id="yorum" placeholder="Yorumunuzu buraya yazın..." rows="4"></textarea>
+            <br>
+            <button onclick="yorumGonder()">Gönder</button>
+        </div>
+        <div id="yorumlarKutusu">
+           
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+       <!-- Footer -->
+       <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- Hızlı Bağlantılar -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-uppercase">Hızlı Bağlantılar</h5>
+                    <br>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <br>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+            
+
+                
+            <!-- Sosyal Medya -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Bizi Takip Edin <br><br><img src="resimler/onur.png" alt="logo DMR" width="150" height="50"></h5>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" class="text-white me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" class="text-white me-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="text-white me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" class="text-white me-3" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- İletişim Bilgileri -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">İletişim</h5>
+                <p><i class="fas fa-phone-alt"></i> +90 542 171 95 45</p>
+                <br>
+                <p><i class="fas fa-envelope"></i> info@dmrotomotiv.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İzmir, Türkiye <br><br><img src="resimler/square.png" alt="TR bayrak" width="50" height="50"></p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy; 2025 DMR Otomotiv. Tüm Hakları Saklıdır.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>

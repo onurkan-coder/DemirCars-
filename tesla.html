@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Roadster Satış İlanı</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+   
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1><img src="resimler/onur.png" alt="logo DMR" width="50" height="50"> Tesla Roadster Satış İlanı</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/tesla.jpg" alt="Tesla 1" id="resim1" class="img-fluid rounded" style="display: block;">
+                    <img src="resimler/tesla2.jpg" alt="Tesla 2" id="resim2" class="img-fluid rounded" style="display: none;">
+                    <img src="resimler/tesla3.jpg" alt="Tesla 3" id="resim3" class="img-fluid rounded" style="display: none;">
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">3</button>
+                </div>
+            </div>
+        </div>
+    </main>
+        <!-- İlan Metinleri -->
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Tesla Roadster</h2>
+                <p><strong>Fiyat:</strong> ₺2,500,000 (Pazarlık payı yok)</p>
+                <p><strong>Model Yılı:</strong> 2022</p>
+                <p><strong>Kilometre:</strong> 1,500 km</p>
+                <p><strong>Renk:</strong> Midnight Silver Metallic</p>
+                <p><strong>Durum:</strong> Mükemmel durumda, sıfır gibi, sadece 1,500 km.</p>
+                <p><strong>Motor:</strong> Elektrikli, 2000 HP</p>
+                <p><strong>Vites:</strong> Tek Pedal Sürüş (Elektrikli Motor)</p>
+                <p><strong>İç Mekan:</strong> Minimalist tasarım, yüksek kaliteli deri döşeme ve dokunmatik ekranlı multimedya sistemi.</p>
+                <p><strong>Özellikler:</strong>
+                    <ul>
+                        <li><strong>0-100 km/h:</strong> 1.9 saniye</li>
+                        <li><strong>Frenler:</strong> Elektrikli fren sistemi</li>
+                        <li><strong>Yol Tutuş:</strong> Gelişmiş elektronik stabilite kontrolü</li>
+                        <li><strong>Teknoloji:</strong> Otonom sürüş, Apple CarPlay, Navigasyon, Bluetooth bağlantısı</li>
+                        <li><strong>Konfor:</strong> Isıtmalı koltuklar, panoramik cam tavan</li>
+                    </ul>
+                </p>
+                
+                <h3>Açıklama:</h3>
+                <p>Tesla Roadster, Tesla'nın mühendislik harikasıdır ve hız dünyasında bir devrim yaratmaktadır. 2000 beygir gücüne sahip elektrikli motoru ve 1.9 saniyede 0-100 km/h hızlanmasıyla inanılmaz bir performans sunuyor. 2022 model, sadece 1,500 km yol almış ve tamamen orijinal, kazasız durumda olan bu araç, size hız, teknoloji ve çevre dostu bir sürüş deneyimi sunuyor. Sıfır gibi, minimal iç tasarımı ve gelişmiş teknoloji özellikleri ile her yönüyle mükemmel bir araç.</p>
+                
+                <h3>Araba Durumu:</h3>
+                <p>Araba sıfır gibi, tüm bakımları yapılmış ve orijinal parçalardan oluşmaktadır. Hiçbir şekilde değişen parçası yoktur ve tamamen orijinaldir. Tesla'nın yenilikçi teknolojileriyle donatılmış olan bu araç, geleceğin sürüş deneyimini bugün sunuyor.</p>
+                
+                <a href="index.html" class="btn btn-danger">Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Tesla Satış İlanları. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    
+</body>
+</html>

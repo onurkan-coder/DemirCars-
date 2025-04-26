@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Girişi ve Kaydı</title>
+    <script src="js2.js" defer></script> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: rgb(116, 211, 240);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color:rgb(0, 255, 110);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #welcomeMessage {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+ 
+    <!-- Menü Çubuğu -->
+    <nav class="navbar">
+        <div>
+            <img src="resimler/onur.png" alt="logo DMR" width="50" height="50">
+            <a href="index.html"><i class="fa fa-home"></i> Ana Sayfa</a>
+            <a href="about.html"><i class="fa fa-user"></i> Hakkında</a>
+            <a href="contact.html"><i class="fa fa-phone"></i>İletişim</a>
+            <a href="kredi.html"> <i class="fas fa-credit-card"></i></i>Kredi Hesaplama</a>
+          
+        </div>
+    </nav>
+    <header class="bg-warning text-white text-center py-4">
+        <h1> <b>DMR OTOMOTİV</b> </h1>
+    </header>
+
+    <div class="container">
+        <h2>Kullanıcı Kaydı </h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="registerPassword" placeholder="Şifre" required>
+            <button type="submit">Kaydol</button>
+        </form>
+
+        <h2>Kullanıcı Girişi</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="loginPassword" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+
+        <div id="message"></div>
+        <div id="welcomeMessage" style="display: none;"></div> 
+    </div>
+<br>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DMR Otomotiv. Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
